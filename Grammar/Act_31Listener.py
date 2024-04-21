@@ -62,6 +62,15 @@ class Act_31Listener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by Act_31Parser#func_call.
+    def enterFunc_call(self, ctx:Act_31Parser.Func_callContext):
+        pass
+
+    # Exit a parse tree produced by Act_31Parser#func_call.
+    def exitFunc_call(self, ctx:Act_31Parser.Func_callContext):
+        pass
+
+
     # Enter a parse tree produced by Act_31Parser#par.
     def enterPar(self, ctx:Act_31Parser.ParContext):
         pass

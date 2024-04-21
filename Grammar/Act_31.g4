@@ -10,7 +10,15 @@ declaration: type tk_ID;
 
 definition: declaration '=' value | tk_ID '=' value;
 
-value: tk_int | tk_float | tk_string | tk_string | op;
+value:
+	tk_int
+	| tk_float
+	| tk_string
+	| tk_string
+	| op
+	| func_call;
+
+func_call: tk_ID '()' | tk_ID '(' value (',' value)* ')';
 
 // Operations
 op:
