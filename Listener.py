@@ -126,24 +126,3 @@ class ListenerDefinitions(Act_31Listener):
                 raise Exception(
                     f"Type 'string' cannot be parsed to type '{self.varible_type}' at line {self.line}"
                 )
-
-    # def exitSum(self, ctx: Act_31Parser.SumContext):
-    #     left = ctx.getChild(0).type
-    #     right = ctx.getChild(1).type
-
-    #     if left != right:
-    #         raise Exception("Different types")
-
-    #     ctx.type = left
-
-    # def exitVar(self, ctx: Act_31Parser.VarContext):
-    #     ctx.type = self.table[ctx.getText()]
-
-    # def exitInt(self, ctx: Act_31Parser.IntContext):
-    #     ctx.type = "int"
-
-    # def exitFloat(self, ctx: Act_31Parser.FloatContext):
-    #     ctx.type = "float"
-
-    # def exitString(self, ctx: Act_31Parser.StringContext):
-    #     ctx.type = "str"
