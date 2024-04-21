@@ -39,7 +39,7 @@ class Listener(Act_31Listener):
         else:
             self.table[var] = type
 
-    def exitFunc_struct(self, ctx: Act_31Parser.Func_structContext):
+    def exitFunc(self, ctx: Act_31Parser.FuncContext):
         self.funcDefinition = False
 
     def enterFunc_call(self, ctx: Act_31Parser.Func_callContext):
@@ -95,6 +95,9 @@ class ListenerDefinitions(Act_31Listener):
 
     def exitFunc_call(self, ctx: Act_31Parser.Func_callContext):
         self.funcCall = False
+
+    # def enterType(self, ctx: Act_31Parser.TypeContext):
+    #     self.varible_type = ctx.getText()
 
     def enterTk_ID(self, ctx: Act_31Parser.Tk_IDContext):
         if self.defining:

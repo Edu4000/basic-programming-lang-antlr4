@@ -8,7 +8,7 @@ from ListenerFunc import ListenerFunc
 
 
 def main(argv):
-    parser = Act_31Parser(CommonTokenStream(Act_31Lexer(FileStream("input.txt"))))
+    parser = Act_31Parser(CommonTokenStream(Act_31Lexer(FileStream("example2.txt"))))
     tree = parser.prog()
     walker = ParseTreeWalker()
 
