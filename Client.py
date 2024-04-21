@@ -1,17 +1,22 @@
 import sys
 from antlr4 import *
-from ANTLR.AbrilListener import AbrilListener
-from ANTLR.AbrilParser import AbrilParser
-from ANTLR.AbrilLexer import AbrilLexer
-from Listener import Listener
+from Grammar.Act_31Listener import Act_31Listener
+from Grammar.Act_31Parser import Act_31Parser
+from Grammar.Act_31Lexer import Act_31Lexer
+from Listener import Listener, ListenerDefinitions
+
 
 def main(argv):
-    parser = AbrilParser(CommonTokenStream(AbrilLexer(FileStream('input.txt'))))
+    parser = Act_31Parser(CommonTokenStream(Act_31Lexer(FileStream("input.txt"))))
     tree = parser.prog()
-    testListener = Listener()
-
     walker = ParseTreeWalker()
+
+    testListener = Listener()
     walker.walk(testListener, tree)
 
-if __name__ == '__main__':
+    definitionListener = ListenerDefinitions(testListener.table)
+    walker.walk(definitionListener, tree)
+
+
+if __name__ == "__main__":
     main(sys.argv)
