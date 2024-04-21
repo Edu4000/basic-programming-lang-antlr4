@@ -80,7 +80,7 @@ FALSE: 'FALSE';
 tk_ID: ID;
 tk_int: DEC* NUM+;
 tk_float: DEC* NUM+ '.' NUM+;
-tk_string: '"' CHR* '"';
+tk_string: STR;
 tk_add: '+';
 tk_sub: '-';
 tk_mult: '*';
@@ -90,6 +90,6 @@ tk_mult: '*';
 ID: [a-zA-Z][a-zA-Z0-9_]*; // identifiers	# ID
 NUM: [0-9]; // numbers
 DEC: [1-9];
-CHR: [a-zA-Z0-9.,];
+STR: ['][a-zA-Z0-9,. ]* ['];
 WS:
 	[ \t\r\n]+ -> skip; // skip spaces, tabs, newlines-> skip; // skip spaces, tabs, newlines
