@@ -32,10 +32,10 @@ op:
 	| '(' op ')'		# par;
 
 variable:
-	tk_ID		# var
-	| tk_int	# int
+	tk_int		# int
 	| tk_float	# float
-	| tk_string	# string;
+	| tk_string	# string
+	| tk_ID		# var;
 
 // Boolean Operations
 boolean:

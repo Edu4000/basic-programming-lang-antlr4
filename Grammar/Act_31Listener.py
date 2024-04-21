@@ -143,15 +143,6 @@ class Act_31Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by Act_31Parser#var.
-    def enterVar(self, ctx:Act_31Parser.VarContext):
-        pass
-
-    # Exit a parse tree produced by Act_31Parser#var.
-    def exitVar(self, ctx:Act_31Parser.VarContext):
-        pass
-
-
     # Enter a parse tree produced by Act_31Parser#int.
     def enterInt(self, ctx:Act_31Parser.IntContext):
         pass
@@ -176,6 +167,15 @@ class Act_31Listener(ParseTreeListener):
 
     # Exit a parse tree produced by Act_31Parser#string.
     def exitString(self, ctx:Act_31Parser.StringContext):
+        pass
+
+
+    # Enter a parse tree produced by Act_31Parser#var.
+    def enterVar(self, ctx:Act_31Parser.VarContext):
+        pass
+
+    # Exit a parse tree produced by Act_31Parser#var.
+    def exitVar(self, ctx:Act_31Parser.VarContext):
         pass
 
 

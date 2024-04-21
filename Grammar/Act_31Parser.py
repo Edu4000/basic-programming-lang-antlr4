@@ -71,8 +71,8 @@ def serializedATN():
         3,14,7,6,135,136,10,4,0,0,136,137,5,11,0,0,137,139,3,14,7,5,138,
         123,1,0,0,0,138,126,1,0,0,0,138,129,1,0,0,0,138,132,1,0,0,0,138,
         135,1,0,0,0,139,142,1,0,0,0,140,138,1,0,0,0,140,141,1,0,0,0,141,
-        15,1,0,0,0,142,140,1,0,0,0,143,148,3,44,22,0,144,148,3,46,23,0,145,
-        148,3,48,24,0,146,148,3,50,25,0,147,143,1,0,0,0,147,144,1,0,0,0,
+        15,1,0,0,0,142,140,1,0,0,0,143,148,3,46,23,0,144,148,3,48,24,0,145,
+        148,3,50,25,0,146,148,3,44,22,0,147,143,1,0,0,0,147,144,1,0,0,0,
         147,145,1,0,0,0,147,146,1,0,0,0,148,17,1,0,0,0,149,150,6,9,-1,0,
         150,151,5,15,0,0,151,156,3,18,9,4,152,156,5,33,0,0,153,156,5,34,
         0,0,154,156,3,20,10,0,155,149,1,0,0,0,155,152,1,0,0,0,155,153,1,
@@ -1157,31 +1157,31 @@ class Act_31Parser ( Parser ):
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
-                localctx = Act_31Parser.VarContext(self, localctx)
+                localctx = Act_31Parser.IntContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 143
-                self.tk_ID()
-                pass
-
-            elif la_ == 2:
-                localctx = Act_31Parser.IntContext(self, localctx)
-                self.enterOuterAlt(localctx, 2)
-                self.state = 144
                 self.tk_int()
                 pass
 
-            elif la_ == 3:
+            elif la_ == 2:
                 localctx = Act_31Parser.FloatContext(self, localctx)
-                self.enterOuterAlt(localctx, 3)
-                self.state = 145
+                self.enterOuterAlt(localctx, 2)
+                self.state = 144
                 self.tk_float()
                 pass
 
-            elif la_ == 4:
+            elif la_ == 3:
                 localctx = Act_31Parser.StringContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
+                self.state = 145
+                self.tk_string()
+                pass
+
+            elif la_ == 4:
+                localctx = Act_31Parser.VarContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
                 self.state = 146
-                self.tk_string()
+                self.tk_ID()
                 pass
 
 
